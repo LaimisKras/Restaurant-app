@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+This Restaurant App system with Laravel + React
+About the project
+It's an application created with PHP Laravel framework as Backend part and JavaScript React library as Frontend part.
+Bootstrap framework
+MySQL Workbench
+About this App :
+This app has connection with MySQL Workbench
+All the changes made in application change the database to.
+Installiation
+Step to run this project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create folder where you want:
 
-## Available Scripts
+Open terminal and paste this:
 
-In the project directory, you can run:
+   git clone  
+In the terminal post this(if composer was instaleted in C:\xampp\htdocs) :
 
-### `npm start`
+      php ../composer.phar install  
+Create database schema in the MySQL Workbench with name - schools
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Then in your cloned laravel project find .env.example file, copy and change it to .env;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Open .env file, find database line and change it to your freshly created database DB_DATABASE=schools
 
-### `npm test`
+Run migrations and seeders by typing:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+      php artisan migrate --seed
+Run passport install for authorization (sometimes you need use - php artisan passport:install --force if you already instaled passport )
 
-### `npm run build`
+      php artisan passport:install
+For key generate:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      php artisan key:generate
+Run the app:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+      php artisan serve
+To run project in React follow the launch procedure here:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Author
+This project was developed by - Laimis Krasauskas
